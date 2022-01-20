@@ -37,3 +37,14 @@
     errors stderr
     tls off
 }
+
+:3100 {
+    proxy / loki:3100 {
+            transparent
+            websocket
+        }
+
+    errors stderr
+    tls off
+}
+
